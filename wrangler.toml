@@ -1,0 +1,16 @@
+name = "qwen-api-proxy"
+main = "worker.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Required Environment Variables (set as secrets):
+#
+# QWEN_TOKEN - Single Qwen authentication token
+#   Get from: https://chat.qwen.ai → F12 → Application → Local Storage → token
+#
+# OR use multiple tokens for load balancing:
+# QWEN_TOKENS - Comma-separated tokens
+#
+# Set via: npx wrangler secret put QWEN_TOKEN
+#
+# Optional: You can add API_KEYS via dashboard later for authorization
